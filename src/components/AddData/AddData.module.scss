@@ -1,0 +1,54 @@
+.wrapper {
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+.title {
+	font-size: 30px;
+	margin-bottom: 0px;
+	color: rgb(107, 107, 107);
+}
+
+.formInput {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: left;
+
+	span {
+		font-size: 13px;
+		color: rgba(114, 114, 114, 0.868);
+	}
+
+	input {
+		min-width: 180px;
+		background-color: rgb(208, 207, 207);
+		border: none;
+		outline: none;
+		min-height: 35px;
+		border-radius: 2px;
+		padding: 5px;
+	}
+}
+
+.inputArea {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 10px;
+}
+
+.spanSkin {
+	display: flex;
+	justify-content: flex-end;
+}
+.spanButton {
+	display: flex;
+	cursor: pointer;
+	background: rgb(149, 148, 148);
+	color: aliceblue;
+	border-radius: 10px;
+	justify-content: center;
+	min-width: 80px;
+	max-height: 25px;
+	font-size: 15px;
+	margin-left: 110px;
+}

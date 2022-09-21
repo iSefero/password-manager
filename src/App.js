@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import axios from 'axios';
+import { useDispatch } from 'react-redux';
+
+import './app.css';
+import AddData from './components/AddData/AddData';
+import ListData from './components/ListData/ListData';
+import { setPassword } from './redux/slices/passwordManagerSlice';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const dispatch = useDispatch();
+
+	React.useEffect(() => {
+		axios.get('https://630f7dc23792563418911561.mockapi.io/password-manager').then((resp) => {
+			dispatch(setPassword(resp.data));
+		});
+	}, []);
+
+	return (
+		<div className="App">
+			<AddData />
+			<ListData />
+		</div>
+	);
 }
 
 export default App;
