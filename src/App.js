@@ -2,7 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import { useDispatch } from 'react-redux';
 
-import './app.css';
+import './App.css';
 import AddData from './components/AddData/AddData';
 import ListData from './components/ListData/ListData';
 import { setPassword } from './redux/slices/passwordManagerSlice';
